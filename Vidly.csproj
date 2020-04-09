@@ -213,9 +213,18 @@
     <Compile Include="Migrations\202004091542378_SetBirthdateOfCustomers.Designer.cs">
       <DependentUpon>202004091542378_SetBirthdateOfCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004091617119_AddMoviesModel.cs" />
+    <Compile Include="Migrations\202004091617119_AddMoviesModel.Designer.cs">
+      <DependentUpon>202004091617119_AddMoviesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004091618381_PopulateGenreType.cs" />
+    <Compile Include="Migrations\202004091618381_PopulateGenreType.Designer.cs">
+      <DependentUpon>202004091618381_PopulateGenreType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -429,6 +438,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004091542378_SetBirthdateOfCustomers.resx">
       <DependentUpon>202004091542378_SetBirthdateOfCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004091617119_AddMoviesModel.resx">
+      <DependentUpon>202004091617119_AddMoviesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004091618381_PopulateGenreType.resx">
+      <DependentUpon>202004091618381_PopulateGenreType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
