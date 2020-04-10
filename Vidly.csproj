@@ -225,6 +225,10 @@
     <Compile Include="Migrations\202004091646194_ChangeGenreIdType.Designer.cs">
       <DependentUpon>202004091646194_ChangeGenreIdType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004101044448_ChangeMembershipTypeId.cs" />
+    <Compile Include="Migrations\202004101044448_ChangeMembershipTypeId.Designer.cs">
+      <DependentUpon>202004101044448_ChangeMembershipTypeId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -454,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004091646194_ChangeGenreIdType.resx">
       <DependentUpon>202004091646194_ChangeGenreIdType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101044448_ChangeMembershipTypeId.resx">
+      <DependentUpon>202004101044448_ChangeMembershipTypeId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
