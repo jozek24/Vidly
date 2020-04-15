@@ -47,6 +47,7 @@ namespace Vidly.Controllers
             return View("CustomersForm", viewModel);
         }
 
+        [HttpPost]
         public ActionResult Save(Customer customer)
         {
             if (customer.Id == 0)
