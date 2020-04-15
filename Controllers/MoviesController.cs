@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -40,5 +41,21 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
+        public ActionResult Edit(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+
+            var viewModel = new MoviesFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MoviesForm",viewModel);
+        }
     }
 }
