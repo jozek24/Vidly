@@ -26,18 +26,6 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
-        public ActionResult New()
-        {
-            var membershipTypes = _context.MembershipTypes.ToList();
-
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            var viewModel = new CustomerFormViewModel
-            {
-                MembershipTypes = membershipTypes
-            };
-            return View("CustomersForm", viewModel);
-        }
-
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
@@ -46,6 +34,17 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             return View(customer);
+        }
+
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+
+            var viewModel = new CustomerFormViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View("CustomersForm", viewModel);
         }
 
         public ActionResult Save(Customer customer)
