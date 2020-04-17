@@ -8,7 +8,7 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
         public CustomersController()
         {
             _context = new ApplicationDbContext();
@@ -50,8 +50,19 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes
+                };
+                return View("CustomersForm", viewModel);
+            }
+
             if (customer.Id == 0)
                 _context.Customers.Add(customer);
+
             else
             {
                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
